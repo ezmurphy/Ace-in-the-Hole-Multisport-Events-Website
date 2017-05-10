@@ -1,0 +1,240 @@
+//
+//File Name: style.less
+//Date: 05/08/17
+//Programmer: Elizabeth Murphy
+//
+
+/*
+
+File Name: style.css
+Date: 05/08/17
+Programmer: Elizabeth Murphy
+
+*/
+
+@import 'mixins.less';
+
+body {
+    background-color: @color1;
+    a {
+        color: @gray-darker;
+        &:hover {
+            color: @color2;
+        }
+    }
+}
+   
+main { 
+    .anchor .glyphicon {
+       font-size: 5em;
+        color: @gray-darker;
+        margin-top: -0.8em;
+        a {
+            &:hover {
+                color: @gray-dark;
+                &:visited {
+                color: @gray-dark;
+                }
+            }
+        }
+    }
+    .cta {
+        background-image: url('../images/finish_line.png');
+        background-color: #e10000;
+        background-position: 50% 25%;
+        background-position: 0 27%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-origin: padding-box;
+        border-top: 5px solid #e10000;
+        border-bottom: 5px solid #e10000;
+    }
+    .date {
+        color: @lightColor;
+        font-size: 2em;
+        padding-top: 5%;
+        padding-bottom: 10%;
+    } 
+    .events-list {
+        background-color: @gray-lighter;
+        padding-bottom: 5%;
+        .events {
+            color: @color2;
+        }
+        width: 100%;
+    }
+    .register {
+        max-width: 60%;
+        margin-bottom: 20%; 
+    }
+    small {
+        color: @color2;
+        font-style: italic
+    }
+    .tagline {
+        background-color: @gray-lighter;
+    }
+}
+
+header {
+    border-top: 5px solid @color2;
+    border-bottom: 5px solid @color2;
+}
+
+footer {
+    .address {
+      margin-top: 10px;  
+    }
+    .anchor-up .glyphicon {
+       font-size: 5em;
+        color: @color2;
+        margin-top: -0.3em;
+        a {
+            &:hover {
+                color: @gray-light;
+                &:visited {
+                color: @gray-light;
+                }
+            }
+        }
+    }
+    .copy {
+        margin-bottom: 10px;
+    }
+    .facebook, .twitter, .starts, .weather {
+            height: 350px;
+            margin-top: 40px;
+    }
+    .footerStyles(@gray-darker; @lightColor; @color2);
+    p { color: @lightColor;    
+    }
+    .starts {
+        table {
+            background-color: @lightColor;
+            color: @darkColor;
+        }
+        th {
+            background-color: @color2;
+            color: @lightColor;
+        }
+    }
+    ul {
+        color: @gray;
+        font-size: 14px;
+    }
+}
+
+h1 { 
+    .headerFontAttributes('Play', sans-serif; @darkColor; 2em);
+    }
+h2 { 
+    .headerFontAttributes('Play', sans-serif; @gray-dark; 1.8em);
+    }
+h3 { 
+    .headerFontAttributes('Play', sans-serif; @gray; 1.6em);
+    }
+h4 { 
+    .headerFontAttributes('Play', sans-serif; @lightColor; 1.4em);
+    }  
+h5 { 
+    .headerFontAttributes('Play', sans-serif; @gray; 1.2em);
+    }
+h6 { 
+    .headerFontAttributes('Play', sans-serif; @gray-light; 1em);
+    }
+p { 
+    .bodyFontAttributes("Open Sans Condensed", sans-serif; @gray-dark; 1em);
+    }
+
+/* STYLING FOR TABLET */
+
+@media only screen and (min-width: 735px) {
+    
+    body {
+        font-size: 16px;
+    }
+    
+    main {
+        .cta {
+            background-position: 65% 20%;
+            background-size: auto;
+        }
+        .date {
+            font-size: 3em;
+            padding-top: 10%;
+            padding-bottom: 0;
+        } 
+        .events-list li {
+            display: inline-block;
+            font-size: .75em;
+        }
+        .register {
+            max-width: 50%;
+            margin-top: 12%;
+            margin-bottom: 10%;
+        }
+    }
+    
+    footer {
+        .address {
+            margin-top: 60px;
+        }
+        .facebook, .twitter {
+            margin-top: 80px;
+        }
+        .starts, .weather {
+            margin-top: 40px;
+        }
+        .starts {
+            font-size: 14px;
+        }
+    }
+}
+
+/* STYLING FOR DESKTOP */
+
+@media only screen and (min-width: 970px) {
+    
+    body {
+        font-size: 18px;
+    }
+    
+    main {
+        .cta {
+            height: 475px;
+            background-size: cover;
+            background-position: 75% 20%;
+        }
+        .date {
+            font-size: 4em;
+            padding-top: 20%;
+            padding-bottom: 0;
+        } 
+        .events-list li {
+        font-size: 1em;
+        }
+        .register {
+        max-width: 60%;
+        margin-top: 29%;
+        margin-bottom: 0; 
+        }
+    }
+    
+    footer {
+        .facebook, .twitter, .starts, .weather {
+            margin: 0;
+            padding: 20px;
+            height: 400px;
+        }
+        .row {
+            margin: 2%;
+            height: 400px;
+        }
+        .starts {
+            font-size: 14px;
+        }
+        .copy {
+            margin-top: 80px;
+        }
+    }
+}

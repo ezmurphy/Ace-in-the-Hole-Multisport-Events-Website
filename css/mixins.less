@@ -1,0 +1,89 @@
+// out: null
+
+//
+//File Name: mixins.less
+//Date: 05/08/17
+//Programmer: Elizabeth Murphy
+//
+
+//------------------------------
+
+// COLOR PALETTE:
+//White RGB (255, 255, 255); #fff;
+//Red RGB (255, 0, 0), hex #E10000;
+//Black RGB (0,0,0), hex #000;
+
+@color1: #FFF;
+@color2: #E10000;
+@color3: #000;
+
+//------------------------------
+
+
+// DEFAULT LIGHT/DARK COLORS:
+//Default non-palette light and dark colors for text and background
+
+@lightColor: #FFF;
+@darkColor: #000;
+
+//------------------------------
+
+
+// GRAYSCALE COLORS
+//Lighter weights of @darkColor from Bootstrap
+
+@gray-darker:  lighten(#000, 13.5%); // #222
+@gray-dark:    lighten(#000, 20%);   // #333
+@gray:         lighten(#000, 33.5%); // #555
+@gray-light:   lighten(#000, 46.7%); // #777
+@gray-lighter: lighten(#000, 93.5%); // #eee
+
+//------------------------------
+
+
+// FONT ATTRIBUTES:
+//Parametric mixins for font attributes
+
+//HEADER FONT MIXIN
+
+.headerFontAttributes(@headerFamily; @headerColor; @headerSize) {
+    font-family: @headerFamily;
+    color: @headerColor; // assigns color to @headerColor
+    font-size: @headerSize; // assigns font size to @headerSize
+    font-weight: bold; // no dynamic arguments needed
+    margin-top: @headerSize * 0.25; // multiply the @headerSize by 0.5 and assign to margin-top
+    margin-bottom: @headerSize * 0.25; // multiply the @headerSize by 0.5 and assign to margin-top
+    text-transform: uppercase;
+}
+
+//BODY FONT MIXIN
+
+.bodyFontAttributes(@fontFamily; @fontColor; @fontSize) {
+    font-family: @fontFamily;// assigns font family
+    color: @fontColor; // assigns color to @fontColor
+    font-size: @fontSize; // assigns font size to @fontSize
+    font-weight: normal;
+    line-height: @fontSize * 2; //multiplies font size by 2 and assigns to line-height   
+}
+
+//FOOTER STYLES
+
+.footerStyles(@footerBackground; @footerFontColor; @footerLinkColor) {
+    background-color: @footerBackground;// assigns color to footer
+    color: @footerFontColor; // assigns color to footer font
+    a {
+        color: @footerLinkColor; //assigns color to links in footer   
+    }
+}
+
+
+//------------------------------
+
+//HORIZONTAL CENTERING
+//From Bootstrap
+
+.center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
