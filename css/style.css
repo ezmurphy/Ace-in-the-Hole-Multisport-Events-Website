@@ -6,9 +6,6 @@ Date: 05/08/17
 Programmer: Elizabeth Murphy
 
 */
-html {
-  background-color: #222222;
-}
 body {
   background-color: #ffffff;
 }
@@ -54,6 +51,22 @@ main .events-list {
 main .events-list .events {
   color: #e10000;
 }
+main .gallery {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+main .grid-item-content {
+  height: 100px;
+  background: #D26;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+main .grid-item-content--height2 {
+  height: 200px;
+}
+main legend {
+  padding: 15px;
+}
 main .register {
   max-width: 60%;
   margin-bottom: 20%;
@@ -62,8 +75,16 @@ main small {
   color: #e10000;
   font-style: italic;
 }
+main strong {
+  font-style: italic;
+  font-weight: bold;
+  color: #e10000;
+}
 main .tagline {
   background-color: #eeeeee;
+}
+main .thumb .caption {
+  min-height: 4em;
 }
 header {
   border-top: 5px solid #e10000;
@@ -177,7 +198,7 @@ p {
   line-height: 2em;
 }
 /* STYLING FOR TABLET */
-@media only screen and (min-width: 735px) {
+@media only screen and (min-width: 768px) {
   body {
     font-size: 16px;
   }
@@ -199,6 +220,9 @@ p {
     margin-top: 12%;
     margin-bottom: 10%;
   }
+  main .thumb .caption {
+    min-height: 8em;
+  }
   footer .address {
     margin-top: 60px;
   }
@@ -215,7 +239,7 @@ p {
   }
 }
 /* STYLING FOR DESKTOP */
-@media only screen and (min-width: 970px) {
+@media only screen and (min-width: 992px) {
   body {
     font-size: 18px;
   }
@@ -236,6 +260,9 @@ p {
     max-width: 60%;
     margin-top: 44%;
     margin-bottom: 0;
+  }
+  main .thumb .caption {
+    min-height: 8em;
   }
   footer .copy {
     margin-top: 30px;
